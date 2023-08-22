@@ -4,6 +4,7 @@ import { MUIWrapperContext } from "../Wrapper";
 import ArticlesSearchResult from "./SearchResult";
 import useDebounce from "../utils/useDebounce";
 import { useQuery } from "react-query";
+import { useTranslation } from "react-i18next";
 
 const searchArticle = (q: string = "", lang: string = "en") => {
   return fetch(
@@ -13,6 +14,7 @@ const searchArticle = (q: string = "", lang: string = "en") => {
 
 function Articles() {
   const { locale } = useContext(MUIWrapperContext);
+  const { t } = useTranslation();
   const [searchValue, setSearchValue] = useState("");
   const debounedSearchValue = useDebounce(searchValue, 300);
 
@@ -26,13 +28,13 @@ function Articles() {
 
   const renderResult = () => {
     if (isLoading) {
-      return <div className="search-message"> Loading... </div>;
+      return <div className="search-message"> {t("loading")}</div>;
     }
 
     if (isError) {
       return (
         <div className="center">
-          We couldn't find your article{" "}
+          {t("notFound")}{" "}
           <span role="img" aria-label="sad">
             😢
           </span>
@@ -55,7 +57,7 @@ function Articles() {
           type="text"
           onChange={({ target: { value } }) => setSearchValue(value)}
           value={searchValue}
-          placeholder="Search articles"
+          placeholder={t("searchArticles")}
         />
         {renderResult()}
       </Grid>

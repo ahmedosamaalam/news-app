@@ -1,5 +1,6 @@
 {
-    "welcome": "Welcome to my app!",
-    "greeting": "Hello!"
-  }
-  
+  "loading": "loading...",
+  "notFound":"We couldn't find your article",
+  "searchArticles":"Search articles",
+  "details":"Details"
+}

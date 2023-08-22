@@ -43,7 +43,7 @@ const NewsCard: React.FC<NewsCardProps> = ({ article }) => {
       </CardContent>
       <CardActions>
         <a href={article.url} target="_blank">
-          <Button size="small">Details</Button>
+          <Button size="small">{t("details")}</Button>
         </a>
       </CardActions>
     </Card>

@@ -1,8 +1,10 @@
 import { Grid } from "@mui/material";
 import * as React from "react";
+import { useTranslation } from "react-i18next";
 import { IArticle } from "../interfaces/NewsInterfaces";
 import NewsCard from "./Card";
 const ArticlesSearchResult = ({ articles }: { articles: IArticle[] }) => {
+  const { t } = useTranslation();
   return articles?.length > 0 ? (
     <Grid container spacing={2} className="p-4">
       {articles.map((article, index) => (
@@ -12,7 +14,7 @@ const ArticlesSearchResult = ({ articles }: { articles: IArticle[] }) => {
       ))}
     </Grid>
   ) : (
-    <div className="search-message"> No articles found</div>
+    <div className="search-message"> {t("notFound")}</div>
   );
 };
 
