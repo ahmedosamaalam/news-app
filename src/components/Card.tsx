@@ -14,17 +14,18 @@ interface NewsCardProps {
 
 const NewsCard: React.FC<NewsCardProps> = ({ article }) => {
   const { t } = useTranslation();
+  const placeHolder = "https://via.placeholder.com/150";
   const handleImageError = (
     event: React.SyntheticEvent<HTMLImageElement, Event>
   ) => {
     const target = event.target as HTMLImageElement;
-    target.src = "https://via.placeholder.com/150";
+    target.src = placeHolder;
   };
   return (
     <Card sx={{ maxWidth: 345 }}>
       <CardMedia
         sx={{ height: 140 }}
-        image={article.urlToImage}
+        image={article.urlToImage || placeHolder}
         title={article.title}
         onError={handleImageError}
       />
