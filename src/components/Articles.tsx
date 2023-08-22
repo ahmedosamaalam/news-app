@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useContext } from "react";
 import { Container, Grid, Input } from "@mui/material";
 import { MUIWrapperContext } from "../Wrapper";
+import ArticlesSearchResult from "./SearchResult";
 import useDebounce from "../utils/useDebounce";
 import { useQuery } from "react-query";
 
@@ -23,16 +24,23 @@ function Articles() {
     }
   );
 
-  const renderArticlesResult = () => {
+  const renderResult = () => {
     if (isLoading) {
-      return <div> Loading... </div>;
+      return <div className="search-message"> Loading... </div>;
     }
 
     if (isError) {
-      return <div className="center">Error</div>;
+      return (
+        <div className="center">
+          We couldn't find your article{" "}
+          <span role="img" aria-label="sad">
+            😢
+          </span>
+        </div>
+      );
     }
     if (isSuccess) {
-      return <div className="search-message"> Data </div>;
+      return <ArticlesSearchResult articles={data.articles} />;
     }
 
     return <></>;
@@ -49,7 +57,7 @@ function Articles() {
           value={searchValue}
           placeholder="Search articles"
         />
-        {renderArticlesResult()}
+        {renderResult()}
       </Grid>
     </Container>
   );
