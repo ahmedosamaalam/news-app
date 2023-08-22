@@ -1,0 +1,65 @@
+node_modules/
+build/
+dist/
+*.log
+
+# Dependency directories
+.pnp/
+.pnp.js
+
+# IDE files
+.idea/
+.vscode/
+
+# Compiled Python files
+__pycache__/
+*.pyc
+*.pyo
+
+# Compiled Python files created by coverage
+.coverage
+
+# Temporary directory
+.tmp/
+
+# Logs
+logs/
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+*.egg-info/
+dist/
+build/
+eggs/
+parts/
+bin/
+var/
+sdist/
+develop-eggs/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Database
+*.sqlite3
+*.db
+
+# Output from coverage
+.coverage
+.coverage.*
+
+# Django migrations
+*/migrations/
+
+# Secret key
+*.secret_key
+
+# Visual Studio Code settings
+.vscode/

@@ -1,0 +1,46 @@
+{
+  "name": "new-app",
+  "version": "5.0.0",
+  "private": true,
+  "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@mui/base": "latest",
+    "@mui/icons-material": "^5.14.3",
+    "@mui/material": "^5.14.5",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "i18next": "^23.4.4",
+    "i18next-http-backend": "^2.2.1",
+    "react": "latest",
+    "react-dom": "latest",
+    "react-i18next": "^13.1.2",
+    "react-query": "^3.39.3",
+    "react-scripts": "latest",
+    "stylis": "^4.3.0",
+    "stylis-plugin-rtl": "^2.1.1",
+    "typescript": "latest"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "latest",
+    "@types/stylis": "^4.2.0"
+  }
+}
