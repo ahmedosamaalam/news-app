@@ -24,14 +24,14 @@ This project is a multi-lingual news app built using the Material-UI framework a
 2. Navigate to the project directory: `cd news-app`
     
 ### Run Front End    
-    - Install dependencies: `npm install`
-    - Run the app: `npm start`
+- Install dependencies: `npm install`
+- Run the app: `npm start`
 
 ### Run Back End    
-    - Navigate to backend directory: `django-backend`
-    - Setup python enviroment and install poetry
-    - Install dependencies: `poetry install`
-    - Run the app : `python manage.py runserver`
+- Navigate to backend directory: `django-backend`
+- Setup python enviroment and install poetry
+- Install dependencies: `poetry install`
+- Run the app : `python manage.py runserver`
 
 For the full-stack version with the backend proxy, follow the additional instructions provided in the backend directory.
 
