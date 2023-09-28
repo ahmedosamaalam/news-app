@@ -1,4 +1,4 @@
-# Interview task | Deno project
+# Interview task
 
 # Multilingual News App with MUI and News API
 
