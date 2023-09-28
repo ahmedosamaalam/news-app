@@ -1,3 +1,5 @@
+# Interview task | Deno project
+
 # Multilingual News App with MUI and News API
 
 This project is a multi-lingual news app built using the Material-UI framework and powered by the News API. The app allows users to browse news articles from various sources based on selected topics such as Apple, Meta, Netflix, Google, Twitter, and Tesla. Users can choose between Arabic and English languages and toggle between light and dark themes. The app is designed to be responsive and works on all modern browsers.
